@@ -1,0 +1,22 @@
+{
+  "name": "todo-js",
+  "version": "1.0.1",
+  "description": "Your Daily ToDo List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarojkumar007/todo-js.git"
+  },
+  "keywords": [
+    "ToDo"
+  ],
+  "author": "Saroj Kumar Sahoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarojkumar007/todo-js/issues"
+  },
+  "homepage": "https://github.com/sarojkumar007/todo-js#readme"
+}
