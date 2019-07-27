@@ -2,9 +2,9 @@
   "name": "todo-js",
   "version": "1.0.1",
   "description": "Your Daily ToDo List",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/sarojkumar007/todo-js/issues"
   },
-  "homepage": "https://github.com/sarojkumar007/todo-js#readme"
+  "homepage": "https://github.com/sarojkumar007/todo-js#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
