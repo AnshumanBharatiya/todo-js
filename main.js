@@ -106,7 +106,7 @@ main.addEventListener("click", function(e) {
                 },0)
                 ul.removeChild(li)
                 if (ul.children.length < 1) {
-                    var p = createParagraph("Your ToDo is Empty!<br>Ådd some.", "no-todos")
+                    var p = createParagraph("Your ToDo is Empty!<br>Add some.", "no-todos")
                     main.removeChild(document.querySelector(".todo-list"));
                     main.append(p)
                 }
