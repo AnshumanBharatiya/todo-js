@@ -1,13 +1,14 @@
 /**/
 @font-face {
     font-family: 'Google';
-    src: url(https://sarojkumar007.github.io/doc/fonts/google-sans-light.woff2) format(woff2);
+    src: url(https://sarojkumar007.github.io/doc/fonts/google-sans-light.woff2);
     font-style: normal;
     font-weight: 100;
 }
 /**/
 * {
-    font-family: Google;
+    font-family: Google,sans-serif;
+    font-weight: bold;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -60,6 +61,8 @@ body {
     background-color: #154276;
 }
 #todo-header h1 {
+    font-family: 'Josefin Sans',Google,sans;
+    font-weight: 400;
     padding: 20px 20px 0px 20px;
     text-align: center;
     color: #fff;
