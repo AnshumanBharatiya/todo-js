@@ -4,6 +4,8 @@ Every programmer's must have developemt for beginner
 
 ## Getting Started
 
+[Live Preview](https://sarojkumar007.github.io/todoJS/)
+
 Follow the steps
 
 ### Start
