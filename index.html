@@ -12,21 +12,23 @@
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="main.js" as="script">
 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Merienda:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="todo-container">
         <header id="todo-header">
             <div class="head">
-                <h1 class="heading">Todo<small>s</small></h1>
+                <h1 class="heading">TODO<small>s</small></h1>
                 <span class="icon">
                     <button class="clearBtn" id="clearBtn">Clear</button>
                     <span>Clear all TODOs</span>
                 </span>
             </div>
-            <input type="text" name="recent-todo" class="todo-input" placeholder="Add your ToDo with Date" id="todo-input">
-            <button id="addBtn">ADD</button>
+            <div class="input-container">
+                <input type="text" name="recent-todo" class="todo-input" placeholder="Add your ToDo with Date" id="todo-input">
+                <button id="addBtn">ADD</button>
+            </div>
         </header>
         <main id="todo-main">
             <p class="no-todos">Your ToDo is Empty!<br>Add some.</p>
