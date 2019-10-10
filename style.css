@@ -8,8 +8,13 @@
 }
 /**/
 * {
+<<<<<<< HEAD
     font-family: Google,sans-serif;
     font-weight: 100;
+=======
+    font-family: 'Merienda',Google,sans-serif;
+    font-weight: bold;
+>>>>>>> origin/master
     padding: 0;
     margin: 0;
     box-sizing: border-box;

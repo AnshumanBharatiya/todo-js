@@ -4,12 +4,18 @@ Every programmer's must have developemt for beginner
 
 ## Getting Started
 
+[Live Preview](https://sarojkumar007.github.io/todoJS/)
+
 Follow the steps
 
 ### Start
 
 * Open the containing folder in **terminal**
 * run ``` npm start```
+
+### Preview
+
+![todo-js-preview](https://miro.medium.com/proxy/1*YgtCXuRGmPfPg2PogXVCfQ.png)
 
 ### Functionality
 
