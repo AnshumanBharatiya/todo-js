@@ -13,6 +13,10 @@ Follow the steps
 * Open the containing folder in **terminal**
 * run ``` npm start```
 
+### Preview
+
+![todo-js-preview](https://miro.medium.com/proxy/1*YgtCXuRGmPfPg2PogXVCfQ.png)
+
 ### Functionality
 
 * Add your ToDos with Date.
