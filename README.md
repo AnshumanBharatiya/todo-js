@@ -15,7 +15,7 @@ Follow the steps
 
 ### Preview
 
-![todo-js-preview](https://miro.medium.com/proxy/1*YgtCXuRGmPfPg2PogXVCfQ.png)
+![todo-js-preview](https://github.com/sarojkumar007/todo-js/blob/master/todo-js-preview.png)
 
 ### Functionality
 
