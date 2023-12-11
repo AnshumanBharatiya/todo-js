@@ -11,7 +11,7 @@
     <title>ToDO-JS</title>
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="main.js" as="script">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link href="https://fonts.googleapis.com/css?family=Merienda:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,16 +21,19 @@
             <div class="head">
                 <h1 class="heading">TODO<small>s</small></h1>
                 <span class="icon">
-                    <button class="clearBtn" id="clearBtn">Clear</button>
+                    <button class="clearBtn" id="clearBtn"><i class="fa-solid fa-broom"></i></button>
                     <span>Clear all TODOs</span>
                 </span>
             </div>
             <div class="input-container">
                 <input type="text" name="recent-todo" class="todo-input" placeholder="Add your ToDo with Date" id="todo-input">
-                <button id="addBtn">ADD</button>
+                <button id="addBtn"><i class="fa-regular fa-square-plus faAdd"></i></button>
             </div>
         </header>
         <main id="todo-main">
+            <div class="search-container">
+                <input type="text" name="search-todo" class="todo-search-input" placeholder="Search your ToDo...." id="todo-search-input">
+            </div>
             <p class="no-todos">Your ToDo is Empty!<br>Add some.</p>
         </main>
         <div class="bottom-design"></div>

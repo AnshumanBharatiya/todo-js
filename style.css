@@ -8,13 +8,8 @@
 }
 /**/
 * {
-<<<<<<< HEAD
     font-family: Google,sans-serif;
     font-weight: 100;
-=======
-    font-family: 'Merienda',Google,sans-serif;
-    font-weight: bold;
->>>>>>> origin/master
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -73,18 +68,18 @@ body {
     }
 }
 .todo-container header{
-    background-color: #154276;
+    background-color: #2B9F8A;
 }
 #todo-header h1 {
     font-family: 'Merienda',Google,sans;
     font-weight: 700;
     text-align: center;
-    color: #fff;
+    color: #333;
     font-size: 3rem;
     text-transform: uppercase;
 }
 .todo-input {
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border: none;
     padding: 10px;
     width: 80%;
@@ -98,7 +93,7 @@ body {
     transition: color .3s;
 }
 .todo-input:hover::-webkit-input-placeholder {
-    color: #999;
+    color: #dfd1d1;
 }
 .todo-input:focus::-webkit-input-placeholder {
     color: #999;
@@ -106,12 +101,31 @@ body {
 .todo-input:hover , .todo-input:focus {
     outline: none;
     background-color: #fff;
-    color: red;
+    color: #333;
 }
+
+.todo-search-input {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 6px;
+    width: 95%;
+    min-width: 25px;
+    margin-left: 14px;
+    font-size: 1rem;
+    transition: background-color .3s;
+    border: rgba(43, 159, 138, 0.4) solid 1px;
+    border-radius: 5px;
+}
+
+.todo-search-input:hover , .todo-search-input:focus {
+    outline: none;
+    background-color: #fff;
+    color: #333;
+}
+
 #addBtn {
-    width: 60px;
+    width: 50px;
     border: none;
-    padding: 10px;
+    padding: 8px;
     font-size: 1.1rem;
     font-weight: 400;
     margin-left: -2px;
@@ -119,6 +133,9 @@ body {
     color: #fff;
     transition: background-color .3s;
     cursor: pointer;
+}
+.faAdd{
+    font-size: 25px;
 }
 @media screen and (max-width: 347px){
     #addBtn{margin-top: 10px;}
@@ -147,8 +164,8 @@ body {
     padding: 10px;
     font-size: 1.1rem;
     margin: 10px;
-    background-color: #ddd;
-    color: #154276;
+    background-color: #e5eae9;
+    color: #105044;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0,0,0,.3);
     transition: opacity .3s;
@@ -161,12 +178,15 @@ body {
 }
 .btn-container button {
     margin-left: 5px;
-    padding: 10px;
+    padding: 5px;
     font-size: .7rem;
     border: none;
     cursor: pointer;
     color: #fff;
     transition: box-shadow .1s;
+}
+.btn-container button .fa-icons{
+    font-size: 15px;
 }
 .btn-container button:hover, .btn-container button:focus {
     outline: none;
