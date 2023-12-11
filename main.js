@@ -19,9 +19,9 @@ function createDiv(className) {
     var div = createElement("div", className)
     return div
 }
-function createBtn(text, className, dataPurpose) {
+function createBtn(inerhtml, className, dataPurpose) {
     var btn = createElement("button", className)
-    btn.innerText = text
+    btn.innerHTML = inerhtml
     btn.setAttribute("data-purpose", dataPurpose)
     return btn
 }
@@ -41,9 +41,9 @@ function createTodo(text) {
             var p = createParagraph(text);
             li.append(p)
             var btn_container = createDiv("btn-container")
-            var upbtn =  createBtn("Up", "up", "up")
-            var downbtn =  createBtn("Down", "down", "down")
-            var removebtn =  createBtn("Remove", "remove", "remove")
+            var upbtn =  createBtn("<i class='fa-regular fa-circle-up fa-icons'></i>", "up", "up")
+            var downbtn =  createBtn("<i class='fa-regular fa-circle-down fa-icons'></i>", "down", "down")
+            var removebtn =  createBtn("<i class='fa-solid fa-trash fa-icons'></i>", "remove", "remove")
             btn_container.append(upbtn)
             btn_container.append(downbtn)
             btn_container.append(removebtn)
@@ -59,9 +59,9 @@ function createTodo(text) {
         var p = createParagraph(text);
         li.append(p)
         var btn_container = createDiv("btn-container")
-        var upbtn =  createBtn("Up", "up", "up")
-        var downbtn =  createBtn("Down", "down", "down")
-        var removebtn =  createBtn("Remove", "remove", "remove")
+        var upbtn =  createBtn("<i class='fa-regular fa-circle-up fa-icons'></i>", "up", "up")
+        var downbtn =  createBtn("<i class='fa-regular fa-circle-down fa-icons'></i>", "down", "down")
+        var removebtn =  createBtn("<i class='fa-solid fa-trash fa-icons'></i>", "remove", "remove")
         btn_container.append(upbtn)
         btn_container.append(downbtn)
         btn_container.append(removebtn)
@@ -129,8 +129,18 @@ if (typeof localStorage != undefined ) {
     })
 
     main.addEventListener("click", function(e) {
-        if(e.target.nodeName === "BUTTON") {
-            var button = e.target;
+        console.log(e.target.nodeName);
+
+        if(e.target.nodeName) {
+            var button;
+            if (e.target.nodeName == "BUTTON") {
+                // If the clicked element is a button, use it directly
+                button = e.target;
+            } else if (e.target.nodeName == "I") {
+                // If the clicked element is an i element, get its parent button
+                button = e.target.closest("button");
+            }
+            // var button = e.target;
             var btnType = button.getAttribute("data-purpose");
             var li = button.parentElement.parentElement;
             let todoVal = li.firstChild.innerText;
@@ -198,7 +208,7 @@ window.onload = () =>{
         let ulData = createUl('todo-list');
         let li = "";
         for(let i = 0; i< storedTodo.length; i++){
-        li += `<li class="todo" style="opacity: 1;"><p>${storedTodo[i]}</p><div class="btn-container"><button class="up" data-purpose="up">Up</button><button class="down" data-purpose="down">Down</button><button class="remove" data-purpose="remove">Remove</button></div></li>`;
+        li += `<li class="todo" style="opacity: 1;"><p>${storedTodo[i]}</p><div class="btn-container"><button class="up" data-purpose="up"><i class="fa-regular fa-circle-up fa-icons"></i></button><button class="down" data-purpose="down"><i class="fa-regular fa-circle-down fa-icons"></i></button><button class="remove" data-purpose="remove"><i class="fa-solid fa-trash fa-icons"></i></button></div></li>`;
         }
         ulData.innerHTML = li;
         main.append(ulData);
@@ -213,3 +223,15 @@ window.onload = () =>{
         icon.innerText = "Nothing to clean!";
     }
 }
+
+//  Search todo from the todo list.
+document.getElementById('todo-search-input').addEventListener('input', function () {
+    const searchValue = this.value.toLowerCase();
+    const todos = document.querySelectorAll('.todo-list .todo');
+
+    todos.forEach(todo => {
+        const todoText = todo.querySelector('p').textContent.toLowerCase();
+        const isVisible = todoText.includes(searchValue);
+        todo.style.display = isVisible ? 'flex' : 'none';
+    });
+});
